@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	{% load static %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	
+	<title></title>
+	<meta name="description" content="" />
+	<meta name="Keywords" content="" /> 
+	<meta name="robots" content="index, follow" />
+
+	<meta property="og:title" content="" /> 
+	<meta property="og:description" content="" />
+	<meta name="og:locale" content="ru_RU">
+    <meta property="og:image" content="{% static 'web/img/meta-logo.png' %}" />
+
+	<link rel="canonical" href="https://militarywear.ru" />
+	<link rel="shortcut icon" href="{% static 'web/img/favicon.ico' %}" type="image/x-icon">
+	
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/main.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/include.css' %}">
+
+	<link rel="stylesheet" href="{% static 'web/splide/dist/css/splide.min.css' %}">
+	<script src="{% static 'web/splide/dist/js/splide.min.js' %}"></script>
+	
+</head>
+<body>
+	{% block content %}
+	<section class="main">
+		{% include 'include/nav.html' %}
+		<div class="main_info">
+			<h1>
+				<span>Military Wear</span>
+				Экипировка и снаряжения<br>различных стран мира
+			</h1>
+		</div>
+	</section>
+	<section class="wrapper">
+		<div class="card__block">
+			<h2 class="block_headline">Хиты продаж</h2>
+			<div class="card__container">
+
+				<a href="#" class="card_el shadow">
+					<div class="card_image">
+						<img src="{% static 'web/img/tempproduct.jpg' %}" alt="">
+					</div>
+					<div class="card_name">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					</div>
+					<div class="card_price">
+						<!-- <span>10000 ₽</span> -->
+						1000 ₽
+					</div>
+				</a>
+				
+				<a href="#" class="card_el shadow">
+					<div class="card_image">
+						<img src="{% static 'web/img/tempproduct.jpg' %}" alt="">
+					</div>
+					<div class="card_name">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					</div>
+					<div class="card_price">
+						<!-- <span>10000 ₽</span> -->
+						1000 ₽
+					</div>
+				</a>
+				<a href="#" class="card_el shadow">
+					<div class="card_image">
+						<img src="{% static 'web/img/tempproduct.jpg' %}" alt="">
+					</div>
+					<div class="card_name">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					</div>
+					<div class="card_price">
+						<!-- <span>10000 ₽</span> -->
+						1000 ₽
+					</div>
+				</a>
+				<a href="#" class="card_el shadow">
+					<div class="card_image">
+						<img src="{% static 'web/img/tempproduct.jpg' %}" alt="">
+					</div>
+					<div class="card_name">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					</div>
+					<div class="card_price">
+						<!-- <span>10000 ₽</span> -->
+						1000 ₽
+					</div>
+				</a>
+			</div>
+			<a href="/" class="button card_more__button">Смотреть все</a>
+		</div>
+
+		<div class="card__block">
+			<h2 class="block_headline">Мощная распродажа</h2>
+			<div class="card__container">
+
+				<a href="#" class="card_el shadow">
+					<div class="card_image">
+						<img src="{% static 'web/img/tempproduct.jpg' %}" alt="">
+					</div>
+					<div class="card_name">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					</div>
+					<div class="card_price">
+						<!-- <span>10000 ₽</span> -->
+						1000 ₽
+					</div>
+				</a>
+				
+				<a href="#" class="card_el shadow">
+					<div class="card_image">
+						<img src="{% static 'web/img/tempproduct.jpg' %}" alt="">
+					</div>
+					<div class="card_name">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					</div>
+					<div class="card_price">
+						<!-- <span>10000 ₽</span> -->
+						1000 ₽
+					</div>
+				</a>
+				<a href="#" class="card_el shadow">
+					<div class="card_image">
+						<img src="{% static 'web/img/tempproduct.jpg' %}" alt="">
+					</div>
+					<div class="card_name">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					</div>
+					<div class="card_price">
+						<!-- <span>10000 ₽</span> -->
+						1000 ₽
+					</div>
+				</a>
+				<a href="#" class="card_el shadow">
+					<div class="card_image">
+						<img src="{% static 'web/img/tempproduct.jpg' %}" alt="">
+					</div>
+					<div class="card_name">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					</div>
+					<div class="card_price">
+						<!-- <span>10000 ₽</span> -->
+						1000 ₽
+					</div>
+				</a>
+			</div>
+			<a href="/" class="button card_more__button">Смотреть все</a>
+		</div>
+
+		<div class="card__block">
+			<h2 class="block_headline">Новинки</h2>
+			<div class="card__container">
+
+				<a href="#" class="card_el shadow">
+					<div class="card_image">
+						<img src="{% static 'web/img/tempproduct.jpg' %}" alt="">
+					</div>
+					<div class="card_name">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					</div>
+					<div class="card_price">
+						<!-- <span>10000 ₽</span> -->
+						1000 ₽
+					</div>
+				</a>
+				
+				<a href="#" class="card_el shadow">
+					<div class="card_image">
+						<img src="{% static 'web/img/tempproduct.jpg' %}" alt="">
+					</div>
+					<div class="card_name">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					</div>
+					<div class="card_price">
+						<!-- <span>10000 ₽</span> -->
+						1000 ₽
+					</div>
+				</a>
+				<a href="#" class="card_el shadow">
+					<div class="card_image">
+						<img src="{% static 'web/img/tempproduct.jpg' %}" alt="">
+					</div>
+					<div class="card_name">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					</div>
+					<div class="card_price">
+						<!-- <span>10000 ₽</span> -->
+						1000 ₽
+					</div>
+				</a>
+				<a href="#" class="card_el shadow">
+					<div class="card_image">
+						<img src="{% static 'web/img/tempproduct.jpg' %}" alt="">
+					</div>
+					<div class="card_name">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					</div>
+					<div class="card_price">
+						<!-- <span>10000 ₽</span> -->
+						1000 ₽
+					</div>
+				</a>
+			</div>
+			<a href="/" class="button card_more__button">Смотреть все</a>
+		</div>
+
+	</section>
+
+	<section class="promote">
+		<h2>Редкая оригинальная форма и снаряжения</h2>
+		<span>В нашем магазине вы найдете редкую оригинальную форму и снаряжение, которое используется реальными военными подразделениями по всему миру.</span>
+		<a href="#" class="button_white">Смотреть все</a>
+	</section>
+
+	<section class="wrapper">
+		<div class="brands">
+			<h2 class="block_headline">Бренды в нашем магазине</h2>
+			<div class="splide">
+				<div class="splide__track">
+					<ul class="splide__list">
+						<li class="splide__slide">
+							<img src="{% static 'web/img/brands/norfin.png' %}">
+						</li>
+						<li class="splide__slide">
+							<img src="{% static 'web/img/brands/derby.png' %}">
+						</li>
+						<li class="splide__slide">
+							<img src="{% static 'web/img/brands/kingsmill.png' %}">
+						</li>
+						<li class="splide__slide">
+							<img src="{% static 'web/img/brands/orido.png' %}">
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="index-address">
+			<h2>Наш магазин в г. Старый Оскол</h2>
+			<div class="index-address__container">
+				<div>
+					<div class="index-address_el">
+						<b>Адрес</b>
+						<a href="https://goo.gl/maps/b3i8KYzih6LZsQvD7" target="_blank">
+							г. Старый Оскол, Улица Ватутина, д. 38
+						</a>
+					</div>
+					<div class="index-address_el">
+						<b>График работы</b>
+						Пн-Вс 9:00 - 19:00
+						<span>Перед посещением обратитесь по телефону</span>
+					</div>
+					<div class="index-address_el">
+						<b>Телефон</b>
+						<a href="tel:89087890761">+7 (908) 789-07-61</a>
+					</div>
+					<div class="index-address_el">
+						<br>
+						<a href="/contacts" class="button">Все контакты</a>
+					</div>
+				</div>
+				<div>
+					<img src="{% static 'web/img/main-shop.jpg' %}" alt="">
+				</div>
+			</div>
+		</div>
+
+		<div class="index-map">
+			<h2>Мы на карте</h2>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1247.6815735112677!2d37.824628!3d51.2860409!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x412509cea957402f%3A0x1b5c187b76aa3f33!2z0YPQuy4g0JLQsNGC0YPRgtC40L3QsCwgMzgsINCh0YLQsNGA0YvQuSDQntGB0LrQvtC7LCDQkdC10LvQs9C-0YDQvtC00YHQutCw0Y8g0L7QsdC7LiwgMzA5NTE4!5e0!3m2!1sru!2sru!4v1648738259661!5m2!1sru!2sru" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>
+	</section>
+
+	
+	<script type="text/javascript">
+		var splide = new Splide( '.splide', {
+			type     : 'loop',
+			height   : '10rem',
+			focus    : 'center',
+			autoWidth: true,
+		} );
+		splide.mount();
+	</script>
+
+	{% include 'include/footer.html' %}
+
+	{% endblock %}
+</body>
+</html>

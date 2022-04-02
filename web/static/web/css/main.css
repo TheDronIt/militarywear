@@ -1,0 +1,244 @@
+html
+{
+    font-size: 62.5%;
+}
+body
+{
+    padding: 0;
+    margin: 0;
+    font-family: Montserrat;
+    font-size: 1.6rem;
+}
+img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+a
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+.wrapper
+{
+    position: relative;
+    max-width: 1100px;
+    min-height: 98vh;
+    margin: 70px auto;
+    padding: 0 20px;
+}
+.button
+{
+    padding: 10px 30px;
+    background-color: white;
+    border: 2px solid #2A2626;
+    font-family: Montserrat_bold;
+    transition-duration: 0.2s;
+}
+.button:hover
+{
+    box-shadow: 0 0 3px 1px gray;
+}
+.button_white
+{
+    padding: 10px 30px;
+    backdrop-filter: blur(4px);
+    border: 2px solid white;
+    font-family: Montserrat_bold;
+    transition-duration: 0.2s;
+}
+.button_white:hover
+{
+    box-shadow: 0 0 3px 1px lightgray;
+}
+.block_headline
+{
+    font-family: Montserrat_bold;
+}
+.shadow
+{
+    transition-duration: 0.4s;
+}
+.shadow:hover
+{
+    box-shadow: 0 0 5px 0.5px lightgray;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Medium.ttf);
+}
+@font-face {
+    font-family: Montserrat_regular;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: Montserrat_bold;
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: Montserrat_black;
+    src: url(../fonts/Montserrat-Black.ttf);
+}
+@font-face {
+    font-family: Reload;
+    src: url(../fonts/Reload.otf);
+}
+
+
+
+.main
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/first-picture.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.main_info
+{
+    position: absolute;
+    padding: 5px 120px 10px 50px;
+    background-color: #2A2626;
+    right: 0;
+    bottom: 100px;
+    color: white;
+    text-align: center;
+}
+.main_info h1
+{
+    font-size: 2rem;   
+}
+.main_info h1 span
+{
+    display: block;
+    font-family: Reload;
+    font-size: 5.2rem;
+}
+
+.card__block
+{
+    position: relative;
+    margin-bottom: 100px;
+}
+.card__container
+{
+    display: grid;
+    max-width: 1100px;
+    grid-template-columns: repeat(auto-fit, 250px);
+    justify-content: space-between;
+}
+.card_el
+{
+    background-color: white;
+    border: 1px solid #ECECEC;
+    padding: 15px;
+
+    display: grid;
+    grid-template-rows: 220px 50px 60px;
+    cursor: pointer;
+
+}
+
+.card_name
+{
+    margin-top: 10px;
+    font-size: 1.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.card_price
+{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.8rem;
+}
+.card_price span
+{
+    display: block;
+    font-size: 1.4rem;
+    color: #2A2626;
+    text-decoration: line-through;
+}
+.card_more__button
+{
+    display: inline-flex;
+    position: absolute;
+    right: 0;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.promote
+{
+    position: relative;
+    background-image: url(../img/promote.png);
+    background-size: cover;
+    background-position: center;
+    max-width: 100vw !important;
+    height: 400px;
+
+    padding: 20px 80px;
+    color: white;
+}
+.promote h2
+{
+    font-family: Montserrat_bold;
+    font-size: 2.5rem;
+}
+.promote span
+{
+    display: block;
+    max-width: 500px;
+    font-size: 1.8rem;
+}
+.promote a
+{
+    position: absolute;
+    bottom: 50px;
+}
+
+.splide__slide
+{
+    padding: 0 20px;
+}
+.brands .splide__pagination
+{
+    visibility: hidden;
+}
+
+.index-address
+{
+    margin: 70px 0;
+}
+.index-address__container
+{
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    grid-gap: 30px;
+}
+.index-address_el
+{
+    margin-bottom: 20px;
+}
+.index-address_el b
+{
+    font-size: 1.8rem;
+    font-weight: normal;
+    font-family: Montserrat_bold;
+    display: block;
+}
+.index-address_el span
+{
+    display: block;
+    font-family: Montserrat_regular;
+    font-size: 1.4rem;
+    color: #303030;
+}
