@@ -1,0 +1,161 @@
+@media screen and (max-width: 980px){
+
+	
+
+
+
+	/*===NAV===*/
+	/*
+	nav
+	{
+		font-size: 55px;
+		background-color: transparent;
+		display: block;
+		box-shadow: none;
+	}
+	#menu__toggle
+	{
+		visibility: hidden;
+	}
+	.menu__btn
+	{
+		visibility: visible;
+	}
+	#menu__btn:checked ~ #menu__toggle
+	{
+		visibility: visible;
+	}
+	.nav_container
+	{
+		display: block;
+		top: 0;
+		left: -100%;
+		visibility: hidden;
+		height: 100%;
+		width: 50%;
+		background-color: #FFFDFD;
+		position: fixed;
+		z-index: 10;
+		padding: 80px 80px 0 120px;
+		box-shadow: 0 5px 10px 2px #C1C1C1;
+	}
+	.nav_main
+	{
+		display: block;
+	}
+	.nav_category
+	{
+		display: block;
+	}
+	.nav_main_link
+	{
+		display: block;
+	}
+
+	.main_info 
+	{
+		display: none;
+	}
+	*/
+	/*===END NAV===*/
+
+	.main
+	{
+		background-position: 25%;
+	}
+
+	.index-address__container
+	{
+		display: block;
+	}
+	.promote
+	{
+		display: none;
+	}
+
+	.nav_category a
+	{
+		width: 20px;
+		font-size: 1rem;
+	}
+	.card__container
+	{
+		justify-content: center;
+		grid-row-gap: 20px;
+	}
+	.card_more__button
+	{
+		left: 0;
+		width: 55%;
+		margin: 20px auto 50px auto;
+	}
+
+	.product_main
+	{
+		grid-template-columns: 1fr;
+	}
+	.product_main_info_price
+	{
+		margin-top: 30px;
+		position: relative;
+	}
+	.catalog__container
+	{
+		margin: auto;
+		justify-content: center;
+	}
+	.contacts_main
+	{
+		grid-template-columns: 1fr;
+	}
+	.contacts_image
+	{
+		width: 100%;
+	}
+	.basket_order
+	{
+		grid-template-columns: 1fr;
+	}
+	.basket_grid
+	{
+		display: none;
+	}
+	.basket_grid__mobile
+	{
+		display: block;
+	}
+
+	.mobile_basket__grid
+	{
+		display: grid;
+		grid-template-columns: 0.5fr 1fr;
+	}
+
+	.mobile_basket_product__name a
+	{
+		font-weight: bold;
+		font-size: 1.8rem;
+	}
+
+	.mobile_basket__grid__info div
+	{
+		margin-bottom: 10px;
+	}
+	.mobile_basket_grid_product__value
+	{
+		display: grid;
+		grid-template-columns: auto auto;
+
+	}
+	.mobile_basket_grid_product__value_change
+	{
+		display: grid;
+		grid-template-columns: 25px 40px 25px;
+	}
+	.mobile_basket_grid_product__value_change span
+	{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}

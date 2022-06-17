@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	{% load static %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	
+	<title></title>
+	<meta name="description" content="" />
+	<meta name="Keywords" content="" /> 
+	<meta name="robots" content="index, follow" />
+
+	<meta property="og:title" content="" /> 
+	<meta property="og:description" content="" />
+	<meta name="og:locale" content="ru_RU">
+    <meta property="og:image" content="{% static 'web/img/meta-logo.png' %}" />
+
+	<link rel="canonical" href="https://militarywear.ru" />
+	<link rel="shortcut icon" href="{% static 'web/img/favicon.ico' %}" type="image/x-icon">
+	
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/main.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/include.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/mobile.css' %}">
+	
+</head>
+<body>
+	{% block content %}
+	{% include 'include/nav.html' %}
+
+	<section class="wrapper">
+
+		<div class="page-info">
+			<a href="/">Главная</a> > Контакты
+			<h1>Контакты</h1>
+		</div>
+
+		<div class="contacts__container">
+			<div class="contacts_main">
+				<div class="contacts_info">
+					<div class="contacts_info_el">
+						<h2>Адрес</h2>
+						г. Старый Оскол, Улица Ватутина, д. 38
+					</div>
+					<div class="contacts_info_el">
+						<h2>График работы</h2>
+						Пн-Вс 9:00 - 19:00
+					</div>
+					<div class="contacts_info_el">
+						<h2>Телефон</h2>
+						+7 (908) 789-07-61
+					</div>
+					<div class="contacts_info_el">
+						<h2>Почта</h2>
+						<a href="mailto:contact@militarywear.ru">contact@militarywear.ru</a>
+					</div>
+					<div class="contacts_info_el">
+						<h2>Соцсети</h2>
+						<a href="https://api.whatsapp.com/send/?phone=89087890761" class="contacts_info_link">
+							<img src="{% static 'web/img/icons/whatsapp.svg' %}">
+							+7 (908) 789-07-61
+						</a>
+						<a href="#" class="contacts_info_link">
+							<img src="{% static 'web/img/icons/vk.svg' %}">
+							military__wear
+						</a>
+						<a href="#" class="contacts_info_link">
+							<img src="{% static 'web/img/icons/telegram.svg' %}">
+							military_wear
+						</a>
+					</div>
+				</div>
+				<div class="contacts_image">
+					<img src="" alt="">
+				</div>
+			</div>
+			<div class="contacts_map">
+				<h2>Мы на карте</h2>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2495.361159468538!2d37.82274911610139!3d51.28607747959938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x412509cea957402f%3A0x1b5c187b76aa3f33!2z0YPQuy4g0JLQsNGC0YPRgtC40L3QsCwgMzgsINCh0YLQsNGA0YvQuSDQntGB0LrQvtC7LCDQkdC10LvQs9C-0YDQvtC00YHQutCw0Y8g0L7QsdC7LiwgMzA5NTE4!5e0!3m2!1sru!2sru!4v1650345331668!5m2!1sru!2sru" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</div>
+
+	</section>
+
+	{% include 'include/footer.html' %}
+	{% endblock %}
+</body>
+</html>

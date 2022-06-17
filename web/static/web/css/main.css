@@ -29,6 +29,7 @@ a
     margin: 70px auto;
     padding: 0 20px;
 }
+
 .button
 {
     padding: 10px 30px;
@@ -36,6 +37,7 @@ a
     border: 2px solid #2A2626;
     font-family: Montserrat_bold;
     transition-duration: 0.2s;
+    cursor: pointer;
 }
 .button:hover
 {
@@ -48,10 +50,23 @@ a
     border: 2px solid white;
     font-family: Montserrat_bold;
     transition-duration: 0.2s;
+    cursor: pointer;
 }
 .button_white:hover
 {
     box-shadow: 0 0 3px 1px lightgray;
+}
+.button_basket-order
+{ 
+    padding: 10px 30px;
+    background-color: black;
+    border: 2px solid black;
+    font-family: Montserrat_bold;
+    transition-duration: 0.2s;
+    color: white;
+    font-size: 1.6rem;
+    width: 100%;
+    cursor: pointer;
 }
 .block_headline
 {
@@ -130,7 +145,8 @@ a
     display: grid;
     max-width: 1100px;
     grid-template-columns: repeat(auto-fit, 250px);
-    justify-content: space-between;
+    justify-content: left;
+    grid-column-gap: 33px;
 }
 .card_el
 {
@@ -241,4 +257,287 @@ a
     font-family: Montserrat_regular;
     font-size: 1.4rem;
     color: #303030;
+}
+
+.catalog__container
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 320px);
+    justify-content: space-between;
+    grid-gap: 60px;
+}
+.catalog_el
+{
+    width: 320px;
+    height: 320px;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+.catalog_el:hover > .catalog__image
+{
+    background: rgba(0,0,0,.15);
+}
+.catalog__image
+{
+    transition-duration: 0.3s;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.55);
+    z-index: 1;
+}
+.catalog__name
+{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    color: white;
+    font-size: 2.2rem;
+    font-family: Montserrat_bold;
+}
+
+
+.product_main
+{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+}
+.product_main_info
+{
+    position: relative;
+}
+.product_main_info_el
+{
+    margin-bottom: 8px;
+}
+.product_main_info_help
+{
+    font-size: 1.4rem;
+    color: #414141;
+    text-decoration: underline;
+}
+.product_main_info_price
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.product_main_info_price span
+{
+    font-size: 2.4rem;
+    font-family: Montserrat_bold;
+    margin-right: 20px;
+}
+
+
+.product_about h2
+{
+    padding-top: 30px;
+    margin-bottom: 5px;
+}
+
+.card__block__hr
+{
+    margin: 100px 0 40px 0;
+}
+.delivery_el
+{
+    margin-bottom: 30px;
+}
+.delivery_el h2
+{
+    font-size: 2rem;
+    margin-bottom: 4px;
+}
+
+.contacts_main
+{
+    display: grid;
+    grid-template-columns: 1fr 500px;
+    grid-gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+.contacts_image
+{
+    width: 500px;
+    height: 281px;
+}
+.contacts_info_el
+{
+    margin-bottom: 15px;
+}
+.contacts__container h2
+{
+    display: block;
+    font-size: 1.6rem;
+    margin-bottom: 4px;
+    font-family: Montserrat_bold;
+    font-weight: normal;
+}
+.contacts_info_link
+{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 10px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.contacts_info_link img
+{
+    width: 24px;
+    height: 24px;
+}
+
+
+.basket__grid
+{
+    display: grid;
+    grid-template-columns: 100px 1fr 130px 130px 130px 30px;
+    grid-gap: 20px;
+}
+.basket_grid__mobile
+{
+    display: none;
+}
+.basket_grid_info
+{
+    margin-bottom: 24px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid black;
+}
+.basket_grid_product
+{
+    max-height: 100px;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #777777;
+}
+.basket_grid_product img
+{
+    height: 100px;
+}
+.basket_grid_product__name
+{
+    position: relative;
+    font-family: Montserrat_bold;
+}
+.basket_grid_product__name_info
+{
+    position: absolute;
+    font-family: Montserrat;
+    bottom: 0;
+    font-size: 1.4rem;
+    padding-bottom: 5px;
+}
+.basket__button
+{
+    background: white;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    cursor: pointer;       
+}
+.basket_grid_product__value 
+{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    justify-content: space-between;
+    width: 80%;
+    
+}
+.basket_grid_product__value span
+{
+    text-align: center;
+}
+
+.basket_order
+{
+    display: grid;
+    grid-template-columns: 350px 300px;
+    grid-gap: 80px;
+    justify-content: center;
+}
+.basket_order_form h2
+{
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+.basket_order_el
+{
+    margin-bottom: 15px;
+}
+.basket_order__input
+{
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    margin-bottom: 14px;
+    width: 80%;
+}
+.basket_order_form b
+{
+    display: block;
+    margin-bottom: 2px;
+}
+
+.delivery__label, .pickup__label
+{
+    display: none;
+}
+#delivery:checked~.delivery__label{
+  display: block;
+}
+#pickup:checked~.pickup__label{
+  display: block;
+}
+.basket_order_attantion
+{
+    font-size: 1.4rem;
+}
+.basket_order_attantion span
+{
+    font-family: Montserrat_bold;
+}
+
+.basket_order_result
+{
+    padding: 20px;
+    border: 2px solid black;
+    height: 100px;
+    font-size: 2.2rem;
+}
+.basket_order_result__text
+{
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.basket_empty__container
+{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.basket_empty__container span
+{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.basket_empty__container .button
+{
+    text-align: center;
+    width: 200px;
+    margin:auto
 }

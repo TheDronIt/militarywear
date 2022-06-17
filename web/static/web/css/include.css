@@ -197,27 +197,86 @@ nav
         top: 0;
         left: -100%;
         visibility: hidden;
-        height: 90%;
-        width: 70%;
-        background-color: #857A5A;
-        padding: 80px 80px 0 40px;
+        height: 100%;
+        max-width: 80%;
+        background-color: #857A5A/*#FFFDFD*/;
+        position: fixed;
+        z-index: 10;
+        padding: 80px 50px;
         box-shadow: 0 5px 10px 2px #C1C1C1;
     }
-    .nav_logo
+    #menu__toggle
     {
-        height: 20px;
-        margin: 0;
+        display: none;
     }
-    .nav_link
-    {
-        display:block;
-        margin: 30px 0;
-    }
-    .nav_link a
+
+
+
+    .nav_main
     {
         display: block;
-        margin: 12px 0px;
+        padding: 0;
     }
+
+    .nav_category
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .nav_main_link
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 10px;
+        margin: 40px 0;
+    }
+    .nav_main_link a
+    {
+        display: block;
+        text-align: left;
+    }
+
+
+    .nav_main_search-and-basket__container
+    {
+        display: grid;
+        grid-template-columns: 1fr auto;
+    }
+    .nav_main_logo
+    {
+        max-width: 100%;
+    }
+    .nav_main_basket
+    {
+        display: block;
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav_category
+    {
+        display: none;
+    }
+
+    .main_info
+    {
+        padding: 5px 45px 10px 20px;
+    }
+    .main_info h1
+    {
+        font-size: 1.8rem;
+    }
+    .main_info h1 span
+    {
+        font-size: 3rem;
+    }
+
+
+
+
+
+
 }
 /* END HEADER  */
 

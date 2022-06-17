@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	{% load static %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	
+	<title></title>
+	<meta name="description" content="" />
+	<meta name="Keywords" content="" /> 
+	<meta name="robots" content="index, follow" />
+
+	<meta property="og:title" content="" /> 
+	<meta property="og:description" content="" />
+	<meta name="og:locale" content="ru_RU">
+    <meta property="og:image" content="{% static 'web/img/meta-logo.png' %}" />
+
+	<link rel="canonical" href="https://militarywear.ru" />
+	<link rel="shortcut icon" href="{% static 'web/img/favicon.ico' %}" type="image/x-icon">
+	
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/main.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/include.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/mobile.css' %}">
+	
+</head>
+<body>
+	{% block content %}
+	{% include 'include/nav.html' %}
+
+	<section class="wrapper">
+
+		<div class="page-info">
+			<a href="/">Главная</a> > Доставка и оплата
+			<h1>Доставка и оплата</h1>
+		</div>
+
+		<div class="delivery__container">
+			<div class="delivery_el">
+				<h2>Оплата</h2>
+				<span>Уважаемые покупатели, в нашем магазине есть возможность оплаты товара как наличными так и банковской картой. Если вы производите оформление заказа на сайте, то вы можете оплатить товар картой, используя безопасную платежную систему ЮКасса, либо оплатить любым доступным способо при самовывозе.</span>
+			</div>
+			<div class="delivery_el">
+				<h2>Самовывоз</h2>
+				<span>Вы можете приобрести наш товар и сэкономить деньги на доставке, если приедете к нам в магазин и заберете его сами. Так же вы можете посмотреть весь ассортимент магазина в живую.<br>
+				Наш магазин находится по адресу:<br>
+				г. Старый Оскол, Улица Ватутина, д. 38</span>
+				<br><br><a href="/contacts/" class="button">Контакты</a><br><br>
+			</div>
+			<div class="delivery_el">
+				<h2>Доставка</h2>
+				<span>Если вы проживаете в городе, где нет нашего магазина - это не проблема.<br>
+				Мы можем отправить все доступые вещи используя службу доставки СДЭК.<br>
+				Цена и время доставки зависит от города, куда будет прозводиться доставка.<br>
+				Отгрузка осуществляется в течении 1-3 рабочих дней.<br>
+				Чтобы посмотреть цену и время доставки, воспользуйтесь  специальным калькулятором.</span>
+				<br><br><a href="https://www.cdek.ru/ru/calculate" target="_blank" class="button">Расчитать</a><br><br>
+			</div>
+		</div>
+
+	</section>
+
+	{% include 'include/footer.html' %}
+	{% endblock %}
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	{% load static %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	
+	<title></title>
+	<meta name="description" content="" />
+	<meta name="Keywords" content="" /> 
+	<meta name="robots" content="index, follow" />
+
+	<meta property="og:title" content="" /> 
+	<meta property="og:description" content="" />
+	<meta name="og:locale" content="ru_RU">
+    <meta property="og:image" content="{% static 'web/img/meta-logo.png' %}" />
+
+	<link rel="canonical" href="https://militarywear.ru" />
+	<link rel="shortcut icon" href="{% static 'web/img/favicon.ico' %}" type="image/x-icon">
+	
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/main.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/include.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/mobile.css' %}">
+	
+</head>
+<body>
+	{% block content %}
+	{% include 'include/nav.html' %}
+
+	<section class="wrapper">
+
+		<div class="page-info">
+			<a href="/">Главная</a> > <a href="/catalog">Каталог</a> > <a href="/catalog/{{Product.Category.id}}">{{Product.Category}}</a> > {{Product.Name}}
+			<h1>{{CategoryName}}</h1>
+		</div>
+
+		<div class="product__container">
+			<div class="product_main">
+				<div class="product_main_image">
+					<img src="{{Product.Image.url}}">
+				</div>
+				<div class="product_main_info">
+					<form method="POST">
+						{% csrf_token %}
+						<h1>{{Product.Name}}</h1>
+						<div class="product_main_info_el">
+							<b>Артикул: </b>{{Product.Articul}}
+						</div>
+						<div class="product_main_info_el">
+							<b>Производитель: </b>{{Product.Manufacturer}}
+						</div>
+						<div class="product_main_info_el">
+							<b>Страна производитель: </b>{{Product.Manufacturer.Country}}
+						</div>
+						<div class="product_main_info_el">
+							<b>Наличие: </b>{{Product.Availability}}
+						</div>
+						<div class="product_main_info_el">
+							<b>Состояние: </b>{{Product.UsedCondition}}
+						</div>
+						<div class="product_main_info_el">
+							<b>Размеры:</b><br>
+							{% for Size in Product.Sizes.all %}
+								{% if forloop.first %}
+									<input type="radio" id="Size.id" name="Size" value="{{Size}}" checked>
+									<label for="Size.id">{{Size}}</label><br>
+								{% else %}
+									<input type="radio" id="Size.id" name="Size" value="{{Size}}">
+									<label for="Size.id">{{Size}}</label><br>
+								{% endif %}
+							{% endfor %}
+						</div>
+						<a href="#" class="product_main_info_help">Задать вопрос</a>
+						<div class="product_main_info_price">
+							<span>{{Product.Price}} ₽</span>
+							<input type="hidden" name="id" value="{{Product.id}}">	
+							<input name="button" type="submit" value="В корзину" class="button">
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="product_about">
+				<h2>Описание</h2>
+				{{Product.About}}
+			</div>
+			<!--
+			<div class="product_video">
+				<h2>Видеообзор</h2>
+				{{Product.About}}
+			</div>
+			-->
+			{% include 'include/popular.html' %}
+		</div>
+
+	</section>
+
+	{% include 'include/footer.html' %}
+	{% endblock %}
+</body>
+</html>

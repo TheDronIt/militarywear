@@ -18,22 +18,19 @@
 				<a href="/contacts">Контакты</a>
 			</div>
 			<div class="nav_main_search-and-basket__container">
-				<div class="nav_main_search">
-					<input type="text" name="search" placeholder="Поиск">
+				<form method="GET" action="/search" class="nav_main_search">
+					<input type="text" name="q" placeholder="Поиск">
 					<img src="{% static 'web/img/icons/search.svg' %}" alt="">
-				</div>
+				</form>
 				<a href="/basket" class="nav_main_basket">
 					<img src="{% static 'web/img/icons/basket.svg' %}" alt="">
 				</a>
 			</div>
 		</div>
 		<div class="nav_category">
-			<a href="#">Категория</a>
-			<a href="#">Категория</a>
-			<a href="#">Категория</a>
-			<a href="#">Категория</a>
-			<a href="#">Категория</a>
-			<a href="#">Категория</a>
+			{% for Category in Nav_category %}
+				<a href="/catalog/{{Category.id}}">{{Category.Name}}</a>
+			{% endfor %}
 		</div>
 		
 	</div>

@@ -21,6 +21,7 @@
 	
 	<link rel="stylesheet" type="text/css" href="{% static 'web/css/main.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'web/css/include.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/mobile.css' %}">
 
 	<link rel="stylesheet" href="{% static 'web/splide/dist/css/splide.min.css' %}">
 	<script src="{% static 'web/splide/dist/js/splide.min.js' %}"></script>
@@ -38,176 +39,31 @@
 		</div>
 	</section>
 	<section class="wrapper">
-		<div class="card__block">
-			<h2 class="block_headline">Хиты продаж</h2>
-			<div class="card__container">
 
-				<a href="#" class="card_el shadow">
+
+		{% for Block in Tags %}
+		<div class="card__block">
+			<h2 class="block_headline">{{Block.Name}}</h2>
+			<div class="card__container">
+				{% for Product in Products__popular %}
+				<a href="/product/{{Product.id}}" class="card_el shadow">
 					<div class="card_image">
-						<img src="{% static 'web/img/tempproduct.jpg' %}" alt="">
+						<img src="{{Product.Image.url}}" alt="">
 					</div>
 					<div class="card_name">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+						{{Product.Name}}
 					</div>
 					<div class="card_price">
 						<!-- <span>10000 ₽</span> -->
-						1000 ₽
+						{{Product.Price}} ₽
 					</div>
 				</a>
+				{% endfor %}
 				
-				<a href="#" class="card_el shadow">
-					<div class="card_image">
-						<img src="{% static 'web/img/tempproduct.jpg' %}" alt="">
-					</div>
-					<div class="card_name">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					</div>
-					<div class="card_price">
-						<!-- <span>10000 ₽</span> -->
-						1000 ₽
-					</div>
-				</a>
-				<a href="#" class="card_el shadow">
-					<div class="card_image">
-						<img src="{% static 'web/img/tempproduct.jpg' %}" alt="">
-					</div>
-					<div class="card_name">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					</div>
-					<div class="card_price">
-						<!-- <span>10000 ₽</span> -->
-						1000 ₽
-					</div>
-				</a>
-				<a href="#" class="card_el shadow">
-					<div class="card_image">
-						<img src="{% static 'web/img/tempproduct.jpg' %}" alt="">
-					</div>
-					<div class="card_name">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					</div>
-					<div class="card_price">
-						<!-- <span>10000 ₽</span> -->
-						1000 ₽
-					</div>
-				</a>
 			</div>
 			<a href="/" class="button card_more__button">Смотреть все</a>
 		</div>
-
-		<div class="card__block">
-			<h2 class="block_headline">Мощная распродажа</h2>
-			<div class="card__container">
-
-				<a href="#" class="card_el shadow">
-					<div class="card_image">
-						<img src="{% static 'web/img/tempproduct.jpg' %}" alt="">
-					</div>
-					<div class="card_name">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					</div>
-					<div class="card_price">
-						<!-- <span>10000 ₽</span> -->
-						1000 ₽
-					</div>
-				</a>
-				
-				<a href="#" class="card_el shadow">
-					<div class="card_image">
-						<img src="{% static 'web/img/tempproduct.jpg' %}" alt="">
-					</div>
-					<div class="card_name">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					</div>
-					<div class="card_price">
-						<!-- <span>10000 ₽</span> -->
-						1000 ₽
-					</div>
-				</a>
-				<a href="#" class="card_el shadow">
-					<div class="card_image">
-						<img src="{% static 'web/img/tempproduct.jpg' %}" alt="">
-					</div>
-					<div class="card_name">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					</div>
-					<div class="card_price">
-						<!-- <span>10000 ₽</span> -->
-						1000 ₽
-					</div>
-				</a>
-				<a href="#" class="card_el shadow">
-					<div class="card_image">
-						<img src="{% static 'web/img/tempproduct.jpg' %}" alt="">
-					</div>
-					<div class="card_name">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					</div>
-					<div class="card_price">
-						<!-- <span>10000 ₽</span> -->
-						1000 ₽
-					</div>
-				</a>
-			</div>
-			<a href="/" class="button card_more__button">Смотреть все</a>
-		</div>
-
-		<div class="card__block">
-			<h2 class="block_headline">Новинки</h2>
-			<div class="card__container">
-
-				<a href="#" class="card_el shadow">
-					<div class="card_image">
-						<img src="{% static 'web/img/tempproduct.jpg' %}" alt="">
-					</div>
-					<div class="card_name">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					</div>
-					<div class="card_price">
-						<!-- <span>10000 ₽</span> -->
-						1000 ₽
-					</div>
-				</a>
-				
-				<a href="#" class="card_el shadow">
-					<div class="card_image">
-						<img src="{% static 'web/img/tempproduct.jpg' %}" alt="">
-					</div>
-					<div class="card_name">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					</div>
-					<div class="card_price">
-						<!-- <span>10000 ₽</span> -->
-						1000 ₽
-					</div>
-				</a>
-				<a href="#" class="card_el shadow">
-					<div class="card_image">
-						<img src="{% static 'web/img/tempproduct.jpg' %}" alt="">
-					</div>
-					<div class="card_name">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					</div>
-					<div class="card_price">
-						<!-- <span>10000 ₽</span> -->
-						1000 ₽
-					</div>
-				</a>
-				<a href="#" class="card_el shadow">
-					<div class="card_image">
-						<img src="{% static 'web/img/tempproduct.jpg' %}" alt="">
-					</div>
-					<div class="card_name">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					</div>
-					<div class="card_price">
-						<!-- <span>10000 ₽</span> -->
-						1000 ₽
-					</div>
-				</a>
-			</div>
-			<a href="/" class="button card_more__button">Смотреть все</a>
-		</div>
+		{% endfor %}
 
 	</section>
 
@@ -218,6 +74,8 @@
 	</section>
 
 	<section class="wrapper">
+
+		<!--
 		<div class="brands">
 			<h2 class="block_headline">Бренды в нашем магазине</h2>
 			<div class="splide">
@@ -239,6 +97,8 @@
 				</div>
 			</div>
 		</div>
+		-->
+
 
 		<div class="index-address">
 			<h2>Наш магазин в г. Старый Оскол</h2>

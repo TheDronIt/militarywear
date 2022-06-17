@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	{% load static %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	
+	<title></title>
+	<meta name="description" content="" />
+	<meta name="Keywords" content="" /> 
+	<meta name="robots" content="index, follow" />
+
+	<meta property="og:title" content="" /> 
+	<meta property="og:description" content="" />
+	<meta name="og:locale" content="ru_RU">
+    <meta property="og:image" content="{% static 'web/img/meta-logo.png' %}" />
+
+	<link rel="canonical" href="https://militarywear.ru" />
+	<link rel="shortcut icon" href="{% static 'web/img/favicon.ico' %}" type="image/x-icon">
+	
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/main.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/include.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/mobile.css' %}">
+	
+</head>
+<body>
+	{% block content %}
+	{% include 'include/nav.html' %}
+
+	<section class="wrapper">
+
+		<div class="page-info">
+			<a href="/">Главная</a> > Каталог
+			<h1>Каталог</h1>
+		</div>
+
+		<div class="catalog__container">
+			{% for Catalog in Catalog__list %}
+				<a href="/catalog/{{Catalog.id}}/" class="catalog_el" style="background-image: url({{ Catalog.Image.url}});">
+					<div class="catalog__image">
+					</div>
+					<div class="catalog__name">
+						{{ Catalog.Name}}
+					</div>
+				</a>
+			{% endfor %}
+		</div>
+
+	</section>
+
+	{% include 'include/footer.html' %}
+	{% endblock %}
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	{% load static %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	
+	<title></title>
+	<meta name="description" content="" />
+	<meta name="Keywords" content="" /> 
+	<meta name="robots" content="index, follow" />
+
+	<meta property="og:title" content="" /> 
+	<meta property="og:description" content="" />
+	<meta name="og:locale" content="ru_RU">
+    <meta property="og:image" content="{% static 'web/img/meta-logo.png' %}" />
+
+	<link rel="canonical" href="https://militarywear.ru" />
+	<link rel="shortcut icon" href="{% static 'web/img/favicon.ico' %}" type="image/x-icon">
+	
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/main.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/include.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'web/css/mobile.css' %}">
+	
+</head>
+<body>
+	{% block content %}
+	{{Basket_price}}
+	{% include 'include/nav.html' %}
+
+	<section class="wrapper">
+
+		<div class="page-info">
+			<a href="/">Главная</a> > Корзина
+			<h1>Корзина</h1>
+		</div>
+
+		{% if Product_list|length > 0 %}
+		<div class="basket__container">
+			<div class="basket_grid">
+				<div class="basket_grid_info basket__grid">
+					<div>Товар</div>
+					<div></div>
+					<div>Цена за ед.</div>
+					<div>Кол-во</div>
+					<div>Итого</div>
+					<div></div>
+				</div>
+
+				{% for Product in Product_list %}
+				<div class="basket_grid_product">
+					<form method="POST" class="basket__grid">
+						{% csrf_token %}
+						<input type="hidden" name="product_id" value="{{Product.Id}}" />
+						<input type="hidden" name="product_size" value="{{Product.Size}}" />
+						<div>
+							<img src="{{Product.Image}}">
+						</div>
+						<div class="basket_grid_product__name">
+							<a href="{{Product.Link}}">{{Product.Name}}</a>
+							<div class="basket_grid_product__name_info">
+								<b>Артикул:</b> {{Product.Articul}}<br>
+								<b>Размер:</b> {{Product.Size}}
+							</div>
+						</div>
+						<div>{{Product.Price}} ₽</div>
+						<div class="basket_grid_product__value">
+							<input type="submit" name="button" value="-" class="basket__button">
+							<span>{{Product.Value}}</span>
+							<input type="submit" name="button" value="+" class="basket__button">
+						</div>
+						<div>{{Product.Full_price}} ₽</div>
+						<div>
+							<input type="submit" name="button" value="✖" class="basket__button">
+						</div>
+					</form>
+				</div>
+				{% endfor %}
+
+			</div>
+
+
+			ц
+			<div class="basket__grid__mobile">
+				
+			{% for Product in Product_list %}
+				<form method="POST" class="mobile_basket__grid">
+					{% csrf_token %}
+					<input type="hidden" name="product_id" value="{{Product.Id}}" />
+					<input type="hidden" name="product_size" value="{{Product.Size}}" />
+					<div>
+						<img src="{{Product.Image}}">
+					</div>
+
+					<div class="mobile_basket__grid__info">
+						<div class="mobile_basket_product__name">
+							<a href="{{Product.Link}}">{{Product.Name}}</a>
+							<div>
+								Артикул: {{Product.Articul}}<br>
+								Размер: {{Product.Size}}
+							</div>
+						</div>
+						<div class="mobile_basket_grid_product__value">
+							<div class="mobile_basket_grid_product__value_change">
+								<input type="submit" name="button" value="-" class="basket__button">
+								<span>{{Product.Value}}</span>
+								<input type="submit" name="button" value="+" class="basket__button">
+							</div class="mobile_basket_grid_product__value_dell">
+							
+							<div>
+								<input type="submit" name="button" value="✖" class="basket__button">
+							</div>
+							
+						</div>
+
+						<div>
+							<b>Цена</b><br>
+							За единицу: {{Product.Price}} ₽<br>
+							Итого: {{Product.Full_price}} ₽
+						</div>
+					</div>
+					
+					
+				</form>
+			</div>
+			{% endfor %}
+
+			
+			<form method="POST" class="basket_order">
+				{% csrf_token %}
+				<div class="basket_order_form">
+					<h2>Оформление заказа</h2>
+
+					<div class="basket_order_el">
+						<b>Контактная информация</b>
+						<input type="input" name="Name" placeholder="ФИО" class="basket_order__input">
+						<input type="tel" name="Phone" placeholder="Телефон" class="basket_order__input">
+						<input type="email" name="Name" placeholder="Почта" class="basket_order__input">
+					</div>
+					
+
+					<div class="basket_order_el">
+						<b>Способ получения</b>
+						<input type="radio" name="Delivery" id="pickup" value="1" checked>Самовывоз<br>
+						<input type="radio" name="Delivery" id="delivery" value="2">Доставка<br>
+
+						<br>
+
+						<label for="delivery" class="delivery__label">
+							<div class="basket_order_el">
+								<b>Адрес доставки</b>
+								<input type="input" name="Delivery_region" placeholder="Область" class="basket_order__input">
+								<input type="input" name="Delivery_city" placeholder="Город" class="basket_order__input">
+								<input type="input" name="Delivery_post-index" placeholder="Почтовый индекс" class="basket_order__input">
+								<input type="input" name="Delivery_address" placeholder="Адрес" class="basket_order__input">
+							</div>
+
+							<div class="basket_order_el">
+								<b>Способ оплаты</b>
+								<input type="radio" name="Delivery_payment" value="2" checked>При получении
+							</div>						
+
+							<div class="basket_order_attantion">
+							<span>Внимание!</span> К итоговой стоимости за товары прибавляется <a href="https://www.cdek.ru/ru/calculate" target="_blank" style="text-decoration: underline;">стоимость доставки</a>
+							</div>
+						</label>
+
+						<label for="pickup" class="pickup__label">
+							<div class="basket_order_el">
+								<b>Адрес самовывоза</b>
+								г. Старый Оскол, Улица Ватутина, д. 38<br>
+								Пн-Вс 9:00 - 19:00
+							</div>
+
+							<div class="basket_order_el">
+								<b>Способ оплаты</b>
+								<input type="radio" name="Pickup_payment" value="1" checked>Онлайн<br>
+								<input type="radio" name="Pickup_payment" value="2">При получении
+							</div>
+						</label>
+
+					</div>
+				</div>
+				<div class="basket_order_result">
+					<span class="basket_order_result__text">
+						<b>Итого: </b>{{BasketPrice}} ₽
+					</span>
+					<input type="submit" name="button" value="Оформить" class="button_basket-order">
+				</div>
+			</form>
+
+		</div>
+		{% else %}
+		
+		<div class="basket_empty__container">
+			<span>
+				Ваша корзина пуста<br>
+				Выберете товар в каталоге чтобы добавить его в корзину
+			</span>
+			<a href="/catalog/" class="button">Каталог</a>
+		</div>
+
+		{% endif %}
+
+	</section>
+
+	{% include 'include/footer.html' %}
+	{% endblock %}
+</body>
+</html>

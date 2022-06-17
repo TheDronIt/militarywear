@@ -61,7 +61,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'militarywear',
+        'NAME': 'MilitaryWear',
         'USER': 'thedronit',
         'PASSWORD': db_password,
         'HOST': '127.0.0.1',
